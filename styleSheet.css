@@ -60,16 +60,54 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden; /* Ensures the image doesn't overflow the container */
 }
 
 .inner-container-dark {
     width: 300px;
     height: 50px;
-    background-color:  #141d2f;
+    background-color: #141d2f;
     padding: 10px;
     border-radius: 8px;
     position: absolute;
     top: 60%;
     left: 65%;
     transform: translate(-50%, -50%);
+    
+}
+
+.circular-image {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 40px; 
+    left: 40px; 
+    background-color: #ffffff;
+}
+
+.name {
+    position: absolute;
+    top: 20px; 
+    left: 170px; 
+}
+
+.joined {
+    position: relative;
+    bottom: 10px; 
+    left: 350px; 
+}
+
+.profile-name {
+    position: relative;
+    bottom: 15px; 
+    left: 130px; 
+    color: #0977ff;
+}
+
+.bio {
+    position: relative;
+    bottom: 15px; 
+    left: 130px; 
+    color: #ffffff;
 }
