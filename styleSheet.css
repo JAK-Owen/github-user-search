@@ -126,16 +126,21 @@ h4 {
 
 /* links */
 .links-container {
-    display: block;
-    justify-content: space-between;
-    margin-top: 150px; /* Adjust as needed for spacing */
-    
+    position: absolute;
+    bottom: 0; /* Align to the bottom */
+    right: 0px; /* Align to the right */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    padding: 0px 0px 20px 0px;
 }
 
 .link-column {
-    width: 48%; /* 2 columns with some spacing in between */
-    text-align: center;
+    width: auto; /* Allow content to determine width */
+    text-align: right; /* Align text to the right in the second column */
+    margin: 5px 0; /* Adjust spacing between links */
+    
 }
+
 
 
 .icon {
@@ -147,6 +152,7 @@ h4 {
 .link {
     color: #ffffff;
     text-decoration: none;
+    margin-right: 100px;
 }
 
 .link:hover {
