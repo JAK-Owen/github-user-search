@@ -186,9 +186,10 @@ h4 {
 
 
 .icon {
-    width: 10px; /* Adjust the icon size as needed */
-    height: 10px;
+    width: 15px; /* Adjust the icon size as needed */
+    height: 15px;
     margin-right: 10px; /* Adjust the spacing between icon and text */
+    
 }
 
 .link {
