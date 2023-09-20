@@ -1,0 +1,35 @@
+body {
+    background-color: #141d2f;
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: monospace Bold;
+    font-size: 26px;
+    line-height: 38px;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: monospace Bold;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+h3 {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h4 {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 20px;
+}
