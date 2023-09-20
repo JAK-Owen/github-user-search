@@ -34,6 +34,48 @@ h4 {
     line-height: 20px;
 }
 
+.search-bar-container {
+    position: relative;
+    margin-top: 120px;
+}
+
+/* Position the search bar above the app-container */
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 560px;
+    background-color: #1e2a47; /* Background color for the search bar */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 10px;
+    display: flex;
+   
+}
+
+/* Style the input field */
+.search-bar input[type="text"] {
+    width: 80%; /* Adjust the width as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: none; /* Remove the default input border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    font-size: 16px; /* Optional: Adjust font size */
+    background-color: #1e2a47;
+}
+
+/* Style the search button */
+.search-bar button {
+    width: 15%; /* Adjust the width as needed */
+    padding: 10px; /* Adjust padding as needed */
+    background-color: #0977ff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove the default button border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    font-size: 16px; /* Optional: Adjust font size */
+    cursor: pointer; /* Add a pointer cursor to the button */
+}
+
+
 
 .app-container {
     width: 500px;
