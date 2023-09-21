@@ -28,7 +28,7 @@
         <h1 class="name" v-if="user">{{ user.name }}</h1> <!-- Displays the user's name if available -->
         <h3 class="joined" v-if="user">Joined: {{ formatDate(user.created_at) }}</h3> <!-- Displays the user's join date if available -->
         <h4 class="profile-name" v-if="user">@{{ user.login }}</h4> <!-- Displays the user's profile name if available -->
-        <h4 class="bio" v-if="user">{{ user.bio }}</h4> <!-- Displays the user's bio if available -->
+        <h4 class="bio" v-if="user">Bio:{{ user.bio }}</h4> <!-- Displays the user's bio if available -->
 
         <!-- INNER CONTAINER -->
         <div class="inner-container-dark" v-if="user">

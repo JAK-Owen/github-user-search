@@ -152,8 +152,8 @@ h4 {
 /* Style the bio */
 .bio {
     position: absolute; /* Absolute positioning within its parent */
-    bottom: 15px; /* Position from the bottom */
-    left: 30px; /* Position from the left */
+    top: 120px; /* Position from the bottom */
+    left: 180px; /* Position from the left */
     color: #ffffff; /* Text color */
 }
 
