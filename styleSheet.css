@@ -34,6 +34,7 @@ h4 {
     line-height: 20px;
 }
 
+
 .search-bar-container {
     position: relative;
     margin-top: 120px;
@@ -71,8 +72,10 @@ h4 {
     color: #fff; /* Button text color */
     border: none; /* Remove the default button border */
     border-radius: 4px; /* Optional: Add rounded corners */
+    font-family: 'space mono', monospace;
     font-size: 16px; /* Optional: Adjust font size */
     cursor: pointer; /* Add a pointer cursor to the button */
+    
 }
 
 
@@ -186,10 +189,7 @@ h4 {
 
 
 .icon {
-    width: 15px; /* Adjust the icon size as needed */
-    height: 15px;
     margin-right: 10px; /* Adjust the spacing between icon and text */
-    
 }
 
 .link {
