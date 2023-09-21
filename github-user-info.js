@@ -1,8 +1,10 @@
-const GitHubUserInfo = {
+export const GitHubUserInfo = {
+    props: ['username'], // Define the 'username' prop
     template: `
       <div>
         <input v-model="username" placeholder="Enter GitHub username" @input="searchUser" />
         <div v-if="user">
+          <img :src="user.avatar_url" alt="User Avatar" class="circular-image" />
           <h2>{{ user.name }}</h2>
           <p>Profile Name: {{ user.login }}</p>
           <p>Bio: {{ user.bio }}</p>
@@ -11,8 +13,8 @@ const GitHubUserInfo = {
           <p>Number of Followers: {{ user.followers }}</p>
           <p>Number Following: {{ user.following }}</p>
           <p>Location: {{ user.location }}</p>
-          <p>Twitter: <a :href="'https://twitter.com/' + user.twitter_username">{{ user.twitter_username }}</a></p>
-          <p>Website: <a :href="user.blog">{{ user.blog }}</a></p>
+          <p v-if="user.twitter_username">Twitter: <a :href="'https://twitter.com/' + user.twitter_username">{{ user.twitter_username }}</a></p>
+          <p v-if="user.blog">Website: <a :href="user.blog">{{ user.blog }}</a></p>
           <p>Company: {{ user.company }}</p>
         </div>
         <div v-else-if="loading">Loading...</div>
@@ -45,13 +47,9 @@ const GitHubUserInfo = {
                 this.loading = false;
             }
         },
-        formatDate(dateString) {
-            // Implement date formatting logic here if needed
-            // For example, you can use JavaScript's Date object
-            const date = new Date(dateString);
-            return date.toLocaleDateString();
+        formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(date).toLocaleDateString(undefined, options);
         },
     },
 };
-
-export default GitHubUserInfo;

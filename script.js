@@ -1,23 +1,35 @@
-import GitHubUserInfo from "./github-user-info.js";
+import { createApp, ref } from 'https://unpkg.com/vue@3.2.7/dist/vue.esm-browser.js';
+import { GitHubUserInfo } from './github-user-info.js';
 
-// Create a Vue app
-const app = Vue.createApp({
-    data() {
-        return {
-            username: "",
-        };
-    },
-    methods: {
-        async searchUser() {
-            // Pass the username to the GitHubUserInfo component
-            this.$refs.userInfo.username = this.username;
-            // Trigger the searchUser method in the component
-            await this.$refs.userInfo.searchUser();
-        },
-    },
+const app = createApp({
+  setup() {
+    // Use a ref to track the 'username' and 'user' data
+    const username = ref('');
+    const user = ref(null);
+
+    // Function to search for the user
+    async function searchUser() {
+      user.value = null; // Clear previous user data
+      const response = await fetch(`https://api.github.com/users/${username.value}`);
+      if (response.ok) {
+        user.value = await response.json();
+      }
+    }
+
+    // Function to format date
+    function formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(date).toLocaleDateString(undefined, options);
+    }
+
+    return {
+      username,
+      user,
+      searchUser,
+      formatDate,
+    };
+  },
 });
 
-// Register the GitHubUserInfo component
 app.component("github-user-info", GitHubUserInfo);
-
 app.mount("#app");
