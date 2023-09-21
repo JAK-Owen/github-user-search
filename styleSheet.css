@@ -1,119 +1,107 @@
+/* CSS Styles */
 body {
     background-color: #141d2f;
     color: #ffffff;
     font-family: 'space mono', monospace;
     font-size: 15px;
     line-height: 25px;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+    font-family: 'space mono', monospace;
+    line-height: 1.5;
+    margin: 0;
 }
 
 h1 {
-    color: #ffffff;
-    font-family: 'space mono' Bold, monospace Bold;
     font-size: 26px;
-    line-height: 38px;
 }
 
 h2 {
-    color: #ffffff;
-    font-family: 'space mono' Bold, monospace Bold;
     font-size: 22px;
-    line-height: 33px;
 }
 
 h3 {
-    color: #ffffff;
-    font-family: 'space mono', monospace;
     font-size: 16px;
-    line-height: 24px;
 }
 
 h4 {
-    color: #ffffff;
-    font-family: 'space mono', monospace;
     font-size: 13px;
-    line-height: 20px;
 }
 
 .font {
     font-family: 'space mono', monospace;
 }
 
-
 .search-bar-container {
     position: relative;
     margin-top: 120px;
 }
 
-/* Position the search bar above the app-container */
 .search-bar {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 560px;
-    background-color: #1e2a47; /* Background color for the search bar */
-    padding: 10px; /* Adjust padding as needed */
+    width: 660px;
+    background-color: #1e2a47;
+    padding: 10px;
     border-radius: 10px;
     display: flex;
-   
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Style the input field */
 .search-bar input[type="text"] {
-    width: 80%; /* Adjust the width as needed */
-    padding: 10px; /* Adjust padding as needed */
-    border: none; /* Remove the default input border */
-    border-radius: 4px; /* Optional: Add rounded corners */
-    font-size: 16px; /* Optional: Adjust font size */
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
     background-color: #1e2a47;
 }
 
-/* Style the search button */
 .search-bar button {
-    width: 15%; /* Adjust the width as needed */
-    padding: 10px; /* Adjust padding as needed */
-    background-color: #0977ff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none; /* Remove the default button border */
-    border-radius: 4px; /* Optional: Add rounded corners */
-    font-size: 16px; /* Optional: Adjust font size */
-    cursor: pointer; /* Add a pointer cursor to the button */
-    
+    width: 15%;
+    padding: 10px;
+    background-color: #0977ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .search-icon {
-    Padding: 10px 0px 0px 10px;
-    
+    padding: 10px 0px 0px 10px;
 }
 
-
-
 .app-container {
-    width: 500px;
+    width: 600px;
     height: 300px;
     background-color: #1e2a47;
     padding: 40px;
     border-radius: 8px;
-    /* Center vertically and horizontally */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    /* Ensures the image doesn't overflow the container */
+    
 }
 
 .inner-container-dark {
-    width: 350px;
+    width: 400px;
     height: 70px;
     background-color: #141d2f;
     padding: 5px;
     border-radius: 8px;
     position: absolute;
-    top: 60%;
+    top: 45%;
     left: 65%;
-    transform: translate(-50%, -50%);
-
+    transform: translateX(-50%);
 }
 
 .circular-image {
@@ -121,89 +109,79 @@ h4 {
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 30px;
+    left: 30px;
     background-color: #ffffff;
+    
 }
 
 .name {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 170px;
 }
 
 .joined {
-    position: relative;
-    bottom: 10px;
-    left: 350px;
+    position: absolute;
+    top: 40px;
+    left: 420px;
 }
 
 .profile-name {
-    position: relative;
-    bottom: 15px;
-    left: 130px;
+    position: absolute;
+    top: 80px;
+    left: 180px;
     color: #0977ff;
 }
 
 .bio {
-    position: relative;
+    position: absolute;
     bottom: 15px;
-    left: 130px;
+    left: 30px;
     color: #ffffff;
 }
 
-
-/* Styles for columns */
 .column {
     width: 26%;
-    /* Adjust as needed for equal spacing */
     display: inline-block;
     vertical-align: middle;
     text-align: center;
     margin: 0 2%;
-    /* Adjust for spacing between columns */
 }
 
-/* Styles for h4 titles in columns */
 .column h4 {
     color: #ffffff;
     margin: 10px 0;
 }
 
-/* Styles for numeric fields */
 .numeric-field {
     color: #ffffff;
     margin: 0;
 }
 
-
-/* links */
 .links-container {
     position: absolute;
-    bottom: 0; /* Align to the bottom */
-    right: 0px; /* Align to the right */
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-    padding: 0px 0px 20px 0px;
+    bottom: 0;
+    right: 0;
+    display:block;
+    flex-direction: column;
+    padding: 0px 100px 30px 40px;
 }
 
 .link-column {
-    width: auto; /* Allow content to determine width */
-    text-align: right; /* Align text to the right in the second column */
-    margin: 5px 0; /* Adjust spacing between links */
-    
+    width: auto;
+    text-align: right;
+    margin: 5px 0;
 }
 
-
-
 .icon {
-    margin-right: 10px; /* Adjust the spacing between icon and text */
+    margin-right: 10px;
 }
 
 .link {
     color: #ffffff;
     text-decoration: none;
-    margin-right: 100px;
+    padding: 40px;
 }
 
 .link:hover {
@@ -212,5 +190,5 @@ h4 {
 
 .link-unavailable {
     color: #ffffff;
-    opacity: 60%;
+    opacity: 0.6;
 }
