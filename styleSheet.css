@@ -60,6 +60,7 @@ h4 {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space between inner items */
     align-items: center; /* Center vertically */
+    color: #ffffff; /* text color */
 }
 
 /* Style the search input field */
@@ -70,6 +71,7 @@ h4 {
     border-radius: 4px; /* Rounded corners */
     font-size: 16px; /* Font size */
     background-color: #1e2a47; /* Background color */
+    color: #ffffff; /* text color */
 }
 
 /* Style the search button */
@@ -112,7 +114,7 @@ h4 {
     border-radius: 8px; /* Rounded corners */
     position: absolute; /* Absolute positioning within its parent */
     top: 45%; /* Vertically center within parent */
-    left: 65%; /* Horizontally position */
+    left: 56%; /* Horizontally position */
     transform: translateX(-50%); /* Center horizontally */
 }
 
@@ -145,7 +147,7 @@ h4 {
 .profile-name {
     position: absolute; /* Absolute positioning within its parent */
     top: 80px; /* Position from the top */
-    left: 180px; /* Position from the left */
+    left: 175px; /* Position from the left */
     color: #0977ff; /* Text color */
 }
 
@@ -153,7 +155,7 @@ h4 {
 .bio {
     position: absolute; /* Absolute positioning within its parent */
     top: 120px; /* Position from the bottom */
-    left: 180px; /* Position from the left */
+    left: 175px; /* Position from the left */
     color: #ffffff; /* Text color */
 }
 
