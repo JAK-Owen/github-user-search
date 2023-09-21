@@ -1,5 +1,4 @@
 export const GitHubUserInfo = {
-  // Define the template for the component
   template: `
     <div>
       <!-- Input field for GitHub username -->
@@ -8,35 +7,44 @@ export const GitHubUserInfo = {
       <!-- Display user information or loading/error messages -->
       <div v-if="user">
         <!-- User's name or 'Name not available' if not provided -->
-        <h2>{{ user.name || 'Name not available' }}</h2>
+        <h1>{{ user.name || 'Name not available' }}</h1>
         
         <!-- User's profile name or 'Profile name not available' -->
-        <p>Profile Name: {{ user.login || 'Profile name not available' }}</p>
+        <h4>Profile Name: {{ user.login || 'Profile name not available' }}</h4>
         
         <!-- User's bio or 'Bio not available' -->
-        <p>Bio: {{ user.bio || 'Bio not available' }}</p>
+        <h4>Bio: {{ user.bio || 'Bio not available' }}</h4>
         
         <!-- Date joined GitHub or 'Date joined not available' -->
-        <p>Date Joined: {{ formatDate(user.created_at) || 'Date joined not available' }}</p>
+        <h3>Date Joined: {{ formatDate(user.created_at) || 'Date joined not available' }}</h3>
         
         <!-- Number of public repositories or 'Repos not available' -->
-        <p>Number of Repos: {{ user.public_repos || 'Repos not available' }}</p>
+        <div class="column">
+          <h4>Repos</h4>
+          <p class="numeric-field">{{ user.public_repos || 'Repos not available' }}</p>
+        </div>
         
         <!-- Number of followers or 'Followers not available' -->
-        <p>Number of Followers: {{ user.followers || 'Followers not available' }}</p>
+        <div class="column">
+          <h4>Followers</h4>
+          <p class="numeric-field">{{ user.followers || 'Followers not available' }}</p>
+        </div>
         
-        <!-- Number following or 'Following not available' -->
-        <p>Number Following: {{ user.following || 'Following not available' }}</p>
-        
+        <!-- Number of following or 'Following not available' -->
+        <div class="column">
+          <h4>Following</h4>
+          <p class="numeric-field">{{ user.following || 'Following not available' }}</p>
+        </div>
+
         <!-- User's location or 'Location not available' -->
         <p>Location: {{ user.location || 'Location not available' }}</p>
-        
+
         <!-- User's Twitter handle with a link or 'Twitter not available' -->
-        <p>Twitter: <a :href="'https://twitter.com/' + user.twitter_username">{{ user.twitter_username || 'Twitter not available' }}</a></p>
-        
+        <p>Twitter: <a :href="'https://twitter.com/' + (user.twitter_username || '')">{{ user.twitter_username || 'Twitter not available' }}</a></p>
+
         <!-- User's website with a link or 'Website not available' -->
         <p>Website: <a :href="user.blog || '#'">{{ user.blog || 'Website not available' }}</a></p>
-        
+
         <!-- User's company or 'Company not available' -->
         <p>Company: {{ user.company || 'Company not available' }}</p>
       </div>
@@ -47,6 +55,11 @@ export const GitHubUserInfo = {
       <!-- Display a custom error message when an error occurs -->
       <div v-else-if="error">
         {{ errorMessage }}
+      </div>
+      
+      <!-- Display fallback content if user info is not available -->
+      <div v-else>
+        Fallback content when user info is not available.
       </div>
     </div>
   `,

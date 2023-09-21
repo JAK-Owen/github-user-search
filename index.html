@@ -23,10 +23,10 @@
     <div class="app-container">
         <!-- Display user avatar, name, join date, profile name, and bio -->
         <img :src="user ? user.avatar_url : ''" alt="User Avatar" class="circular-image" v-if="user">
-        <h1 class="name" v-if="user">{{ user.name }}</h1>
-        <h3 class="joined" v-if="user">Joined: {{ formatDate(user.created_at) }}</h3>
-        <h4 class="profile-name" v-if="user">@{{ user.login }}</h4>
-        <h4 class="bio" v-if="user">Bio:{{ user.bio }}</h4>
+        <h1 class="name" v-if="user">{{ user.name || user.login }}</h1>
+        <h3 class="joined" v-if="user">Joined: {{ formatDate(user.created_at) || 'Join date not available' }}</h3>
+        <h4 class="profile-name" v-if="user">@{{ user.login || 'User not available'}}</h4>
+        <h4 class="bio" v-if="user">{{ user.bio || 'Bio not available' }}</h4>
 
         <!-- Display error message if an error occurs -->
         <div class="error-message" v-if="error">{{ errorMessage }}</div>

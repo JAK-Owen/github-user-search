@@ -1,4 +1,3 @@
-// Import necessary Vue.js modules and a custom component
 import { createApp, ref, onMounted } from 'https://unpkg.com/vue@3.2.7/dist/vue.esm-browser.js';
 import { GitHubUserInfo } from './github-user-info.js';
 
@@ -8,31 +7,41 @@ const app = createApp({
     // Initialize default GitHub username
     const defaultUsername = 'octocat';
 
-    // Track user input for GitHub username
+    // Track user input for GitHub username using a "ref" reactive property
     const username = ref('');
 
-    // Store user data fetched from GitHub
+    // Store user data fetched from GitHub using a "ref" reactive property
     const user = ref(null);
 
-    // Store error flag and error message
+    // Store error flag and error message using "ref" reactive properties
     const error = ref(false);
     const errorMessage = ref('');
 
     // Function to fetch user data from GitHub API
     async function searchUser() {
-      user.value = null; // Clear previous user data
-      error.value = false; // Reset error flag
-      errorMessage.value = ''; // Reset error message
+      // Clear previous user data and reset error flags and messages
+      user.value = null;
+      error.value = false;
+      errorMessage.value = '';
 
-      const response = await fetch(`https://api.github.com/users/${username.value || defaultUsername}`);
-      if (response.ok) {
-        user.value = await response.json(); // Update user data if request is successful
-      } else {
-        // If the request is not successful, set user data to null and display an error message
-        user.value = null;
+      // Fetch user data from the GitHub API based on the entered username
+      try {
+        const response = await fetch(`https://api.github.com/users/${username.value || defaultUsername}`);
+
+        if (response.status === 200) {
+          // If the request is successful (status code 200), update the user data
+          user.value = await response.json();
+        } else {
+          // If the request is not successful (status code other than 200), handle the error
+          error.value = true;
+          errorMessage.value = 'Failed to fetch user data from GitHub';
+          console.error(`GitHub API request failed with status: ${response.status}`);
+        }
+      } catch (e) {
+        // Handle network errors or other exceptions
         error.value = true;
-        errorMessage.value = 'Failed to fetch user data from GitHub';
-        console.error(`GitHub API request failed with status: ${response.status}`);
+        errorMessage.value = 'An error occurred while fetching user data from GitHub';
+        console.error('An error occurred:', e);
       }
     }
 
