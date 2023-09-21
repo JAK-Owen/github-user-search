@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleSheet.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap">
-    <title>GitHub User Search</title>
+    <meta charset="UTF-8"> <!-- Specifies character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Defines viewport for responsive design -->
+    <link rel="stylesheet" href="styleSheet.css"> <!-- Links to an external CSS file -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"> <!-- Loads a font from Google Fonts -->
+    <title>GitHub User Search</title> <!-- Sets the title of the web page -->
 </head>
 <body>
 
-<div id="app">
+<div id="app"> <!-- Container for the Vue.js application -->
     <!-- SEARCH BAR -->
     <div class="search-bar-container">
         <div class="search-bar">
             <div class="search-icon">
-                <img src="images/icon-search.svg" alt="Search icon" class="icon">
+                <img src="images/icon-search.svg" alt="Search icon" class="icon"> <!-- Displays a search icon -->
             </div>
-            <input class="font" type="text" v-model="username" placeholder="Search GitHub username...">
-            <button class="font" @click="searchUser">Search</button>
+            <input class="font" type="text" v-model="username" placeholder="Search GitHub username..."> <!-- Input field for entering a GitHub username -->
+            <button class="font" @click="searchUser">Search</button> <!-- Button to trigger the GitHub user search -->
         </div>
     </div>
     <!-- SEARCH BAR END-->
 
     <!-- MAIN CONTAINER -->
     <div class="app-container">
-        <img :src="user ? user.avatar_url : ''" alt="User Avatar" class="circular-image" v-if="user">
-        <h1 class="name" v-if="user">{{ user.name }}</h1>
-        <h3 class="joined" v-if="user">Joined: {{ formatDate(user.created_at) }}</h3>
-        <h4 class="profile-name" v-if="user">Profile: {{ user.login }}</h4>
-        <h4 class="bio" v-if="user">{{ user.bio }}</h4>
+        <img :src="user ? user.avatar_url : ''" alt="User Avatar" class="circular-image" v-if="user"> <!-- Displays the user's avatar if available -->
+        <h1 class="name" v-if="user">{{ user.name }}</h1> <!-- Displays the user's name if available -->
+        <h3 class="joined" v-if="user">Joined: {{ formatDate(user.created_at) }}</h3> <!-- Displays the user's join date if available -->
+        <h4 class="profile-name" v-if="user">Profile: {{ user.login }}</h4> <!-- Displays the user's profile name if available -->
+        <h4 class="bio" v-if="user">{{ user.bio }}</h4> <!-- Displays the user's bio if available -->
 
         <!-- INNER CONTAINER -->
         <div class="inner-container-dark" v-if="user">
             <div class="column">
                 <h4>Repos</h4>
-                <p class="numeric-field">{{ user.public_repos }}</p>
+                <p class="numeric-field">{{ user.public_repos }}</p> <!-- Displays the number of public repositories -->
             </div>
             <div class="column">
                 <h4>Followers</h4>
-                <p class="numeric-field">{{ user.followers }}</p>
+                <p class="numeric-field">{{ user.followers }}</p> <!-- Displays the number of followers -->
             </div>
             <div class="column">
                 <h4>Following</h4>
-                <p class="numeric-field">{{ user.following }}</p>
+                <p class="numeric-field">{{ user.following }}</p> <!-- Displays the number of people the user is following -->
             </div>
         </div>
         <!-- INNER CONTAINER END-->
@@ -51,8 +51,8 @@
 </div>
 
 <!-- Vue.js and custom scripts -->
-<script type="module" src="https://unpkg.com/vue@3.2.7/dist/vue.esm-browser.js"></script>
-<script type="module" src="github-user-info.js"></script>
-<script type="module" src="script.js"></script>
+<script type="module" src="https://unpkg.com/vue@3.2.7/dist/vue.esm-browser.js"></script> <!-- Imports Vue.js library -->
+<script type="module" src="github-user-info.js"></script> <!-- Imports custom JavaScript for GitHub user info -->
+<script type="module" src="script.js"></script> <!-- Imports custom JavaScript for the main script -->
 </body>
 </html>

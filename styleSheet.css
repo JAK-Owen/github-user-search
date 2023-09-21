@@ -1,194 +1,219 @@
-/* CSS Styles */
+/* Set basic styles for the entire page */
 body {
-    background-color: #141d2f;
-    color: #ffffff;
-    font-family: 'space mono', monospace;
-    font-size: 15px;
-    line-height: 25px;
-    margin: 0;
+    background-color: #141d2f; /* Background color */
+    color: #ffffff; /* Text color */
+    font-family: 'space mono', monospace; /* Font family */
+    font-size: 15px; /* Font size */
+    line-height: 25px; /* Spacing between lines */
+    margin: 0; /* Remove default margins */
 }
 
+/* Apply common styles to headings (h1, h2, h3, h4) */
 h1, h2, h3, h4 {
-    color: #ffffff;
-    font-family: 'space mono', monospace;
-    line-height: 1.5;
-    margin: 0;
+    color: #ffffff; /* Text color */
+    font-family: 'space mono', monospace; /* Font family */
+    line-height: 1.5; /* Spacing between lines */
+    margin: 0; /* Remove default margins */
 }
 
+/* Customize h1 */
 h1 {
-    font-size: 26px;
+    font-size: 26px; /* Larger font size */
 }
 
+/* Customize h2 */
 h2 {
-    font-size: 22px;
+    font-size: 22px; /* Medium font size */
 }
 
+/* Customize h3 */
 h3 {
-    font-size: 16px;
+    font-size: 16px; /* Smaller font size */
 }
 
+/* Customize h4 */
 h4 {
-    font-size: 13px;
+    font-size: 13px; /* Even smaller font size */
 }
 
+/* Apply 'space mono' font to elements with class '.font' */
 .font {
     font-family: 'space mono', monospace;
 }
 
+/* Style the search bar container */
 .search-bar-container {
-    position: relative;
-    margin-top: 120px;
+    position: relative; /* Positioning context for child elements */
+    margin-top: 120px; /* Margin from the top */
 }
 
+/* Style the search bar itself */
 .search-bar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 660px;
-    background-color: #1e2a47;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: absolute; /* Absolute positioning within its parent */
+    top: 50%; /* Vertically center within parent */
+    left: 50%; /* Horizontally center within parent */
+    transform: translate(-50%, -50%); /* Centering trick */
+    width: 660px; /* Fixed width */
+    background-color: #1e2a47; /* Background color */
+    padding: 10px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between inner items */
+    align-items: center; /* Center vertically */
 }
 
+/* Style the search input field */
 .search-bar input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #1e2a47;
+    flex: 1; /* Take up available space */
+    padding: 10px; /* Inner padding */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    background-color: #1e2a47; /* Background color */
 }
 
+/* Style the search button */
 .search-bar button {
-    width: 15%;
-    padding: 10px;
-    background-color: #0977ff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
+    width: 15%; /* Fixed width */
+    padding: 10px; /* Inner padding */
+    background-color: #0977ff; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Show a pointer cursor on hover */
 }
 
+/* Add padding to the search icon */
 .search-icon {
     padding: 10px 0px 0px 10px;
 }
 
+/* Style the app container */
 .app-container {
-    width: 600px;
-    height: 300px;
-    background-color: #1e2a47;
-    padding: 40px;
-    border-radius: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    
+    width: 600px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    background-color: #1e2a47; /* Background color */
+    padding: 40px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    position: absolute; /* Absolute positioning within its parent */
+    top: 50%; /* Vertically center within parent */
+    left: 50%; /* Horizontally center within parent */
+    transform: translate(-50%, -50%); /* Centering trick */
+    overflow: hidden; /* Hide overflowing content */
 }
 
+/* Style the dark inner container */
 .inner-container-dark {
-    width: 400px;
-    height: 70px;
-    background-color: #141d2f;
-    padding: 5px;
-    border-radius: 8px;
-    position: absolute;
-    top: 45%;
-    left: 65%;
-    transform: translateX(-50%);
+    width: 400px; /* Fixed width */
+    height: 70px; /* Fixed height */
+    background-color: #141d2f; /* Dark background color */
+    padding: 5px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    position: absolute; /* Absolute positioning within its parent */
+    top: 45%; /* Vertically center within parent */
+    left: 65%; /* Horizontally position */
+    transform: translateX(-50%); /* Center horizontally */
 }
 
+/* Style the circular image */
 .circular-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background-color: #ffffff;
-    
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    border-radius: 50%; /* Circular shape */
+    position: absolute; /* Absolute positioning within its parent */
+    top: 30px; /* Position from the top */
+    left: 30px; /* Position from the left */
+    background-color: #ffffff; /* Background color */
 }
 
+/* Style the name */
 .name {
-    position: absolute;
-    top: 30px;
-    left: 170px;
+    position: absolute; /* Absolute positioning within its parent */
+    top: 30px; /* Position from the top */
+    left: 170px; /* Position from the left */
 }
 
+/* Style the joined date */
 .joined {
-    position: absolute;
-    top: 40px;
-    left: 420px;
+    position: absolute; /* Absolute positioning within its parent */
+    top: 40px; /* Position from the top */
+    left: 420px; /* Position from the left */
 }
 
+/* Style the profile name */
 .profile-name {
-    position: absolute;
-    top: 80px;
-    left: 180px;
-    color: #0977ff;
+    position: absolute; /* Absolute positioning within its parent */
+    top: 80px; /* Position from the top */
+    left: 180px; /* Position from the left */
+    color: #0977ff; /* Text color */
 }
 
+/* Style the bio */
 .bio {
-    position: absolute;
-    bottom: 15px;
-    left: 30px;
-    color: #ffffff;
+    position: absolute; /* Absolute positioning within its parent */
+    bottom: 15px; /* Position from the bottom */
+    left: 30px; /* Position from the left */
+    color: #ffffff; /* Text color */
 }
 
+/* Define column styles for layout */
 .column {
-    width: 26%;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    margin: 0 2%;
+    width: 26%; /* Column width */
+    display: inline-block; /* Display as inline block */
+    vertical-align: middle; /* Vertically align within parent */
+    text-align: center; /* Center text */
+    margin: 0 2%; /* Margin between columns */
 }
 
+/* Style h4 elements within columns */
 .column h4 {
-    color: #ffffff;
-    margin: 10px 0;
+    color: #ffffff; /* Text color */
+    margin: 10px 0; /* Margin top and bottom */
 }
 
+/* Style numeric fields */
 .numeric-field {
-    color: #ffffff;
-    margin: 0;
+    color: #ffffff; /* Text color */
+    margin: 0; /* Reset margin */
 }
 
+/* Style links container */
 .links-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display:block;
-    flex-direction: column;
-    padding: 0px 100px 30px 40px;
+    position: absolute; /* Absolute positioning within its parent */
+    bottom: 0; /* Stick to the bottom */
+    right: 0; /* Stick to the right */
+    display:block; /* Display as a block */
+    flex-direction: column; /* Arrange links vertically */
+    padding: 0px 100px 30px 40px; /* Padding */
 }
 
+/* Style link columns */
 .link-column {
-    width: auto;
-    text-align: right;
-    margin: 5px 0;
+    width: auto; /* Auto width */
+    text-align: right; /* Right-align text */
+    margin: 5px 0; /* Margin top and bottom */
 }
 
+/* Style icons within link columns */
 .icon {
-    margin-right: 10px;
+    margin-right: 10px; /* Margin to the right */
 }
 
+/* Style links */
 .link {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 40px;
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underlines */
+    padding: 40px; /* Padding around links */
 }
 
+/* Style links on hover */
 .link:hover {
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px #ffffff; /* Add a bottom border on hover */
 }
 
+/* Style unavailable links with reduced opacity */
 .link-unavailable {
-    color: #ffffff;
-    opacity: 0.6;
+    color: #ffffff; /* Text color */
+    opacity: 0.6; /* Reduced opacity */
 }
