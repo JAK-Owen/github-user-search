@@ -14,12 +14,25 @@ const app = createApp({
     // Store user data fetched from GitHub
     const user = ref(null);
 
+    // Store error flag and error message
+    const error = ref(false);
+    const errorMessage = ref('');
+
     // Function to fetch user data from GitHub API
     async function searchUser() {
       user.value = null; // Clear previous user data
+      error.value = false; // Reset error flag
+      errorMessage.value = ''; // Reset error message
+
       const response = await fetch(`https://api.github.com/users/${username.value || defaultUsername}`);
       if (response.ok) {
         user.value = await response.json(); // Update user data if request is successful
+      } else {
+        // If the request is not successful, set user data to null and display an error message
+        user.value = null;
+        error.value = true;
+        errorMessage.value = 'Failed to fetch user data from GitHub';
+        console.error(`GitHub API request failed with status: ${response.status}`);
       }
     }
 
@@ -34,11 +47,13 @@ const app = createApp({
 
     // Return data and functions for the Vue.js component
     return {
-      username,       // User input field
-      user,           // GitHub user data
-      searchUser,     // Function to fetch user data
-      formatDate,     // Function to format dates
-      defaultUsername, // Default GitHub username
+      username,           // User input field
+      user,               // GitHub user data
+      error,              // Error flag
+      errorMessage,       // Error message
+      searchUser,         // Function to fetch user data
+      formatDate,         // Function to format dates
+      defaultUsername,    // Default GitHub username
     };
   },
 });
