@@ -1,39 +1,39 @@
 /* Set basic styles for the entire page */
 body {
-    background-color: #141d2f; /* Background color */
-    color: #ffffff; /* Text color */
-    font-family: 'space mono', monospace; /* Font family */
-    font-size: 15px; /* Font size */
-    line-height: 25px; /* Spacing between lines */
-    margin: 0; /* Remove default margins */
+    background-color: #141d2f;
+    color: #ffffff;
+    font-family: 'space mono', monospace;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
 }
 
 /* Apply common styles to headings (h1, h2, h3, h4) */
 h1, h2, h3, h4 {
-    color: #ffffff; /* Text color */
-    font-family: 'space mono', monospace; /* Font family */
-    line-height: 1.5; /* Spacing between lines */
-    margin: 0; /* Remove default margins */
+    color: #ffffff;
+    font-family: 'space mono', monospace;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Customize h1 */
 h1 {
-    font-size: 26px; /* Larger font size */
+    font-size: 26px;
 }
 
 /* Customize h2 */
 h2 {
-    font-size: 22px; /* Medium font size */
+    font-size: 22px;
 }
 
 /* Customize h3 */
 h3 {
-    font-size: 16px; /* Smaller font size */
+    font-size: 16px;
 }
 
 /* Customize h4 */
 h4 {
-    font-size: 13px; /* Even smaller font size */
+    font-size: 13px;
 }
 
 /* Apply 'space mono' font to elements with class '.font' */
@@ -43,47 +43,47 @@ h4 {
 
 /* Style the search bar container */
 .search-bar-container {
-    position: relative; /* Positioning context for child elements */
-    margin-top: 120px; /* Margin from the top */
+    position: relative;
+    margin-top: 120px;
 }
 
 /* Style the search bar itself */
 .search-bar {
-    position: absolute; /* Absolute positioning within its parent */
-    top: 50%; /* Vertically center within parent */
-    left: 50%; /* Horizontally center within parent */
-    transform: translate(-50%, -50%); /* Centering trick */
-    width: 660px; /* Fixed width */
-    background-color: #1e2a47; /* Background color */
-    padding: 10px; /* Inner padding */
-    border-radius: 10px; /* Rounded corners */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between inner items */
-    align-items: center; /* Center vertically */
-    color: #ffffff; /* text color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 660px;
+    background-color: #1e2a47;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
 }
 
 /* Style the search input field */
 .search-bar input[type="text"] {
-    flex: 1; /* Take up available space */
-    padding: 10px; /* Inner padding */
-    border: none; /* Remove borders */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    background-color: #1e2a47; /* Background color */
-    color: #ffffff; /* text color */
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #1e2a47;
+    color: #ffffff;
 }
 
 /* Style the search button */
 .search-bar button {
-    width: 15%; /* Fixed width */
-    padding: 10px; /* Inner padding */
-    background-color: #0977ff; /* Background color */
-    color: #fff; /* Text color */
-    border: none; /* Remove borders */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Show a pointer cursor on hover */
+    width: 15%;
+    padding: 10px;
+    background-color: #0977ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 /* Add padding to the search icon */
@@ -93,143 +93,148 @@ h4 {
 
 /* Style the app container */
 .app-container {
-    width: 600px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    background-color: #1e2a47; /* Background color */
-    padding: 40px; /* Inner padding */
-    border-radius: 8px; /* Rounded corners */
-    position: absolute; /* Absolute positioning within its parent */
-    top: 50%; /* Vertically center within parent */
-    left: 50%; /* Horizontally center within parent */
-    transform: translate(-50%, -50%); /* Centering trick */
-    overflow: hidden; /* Hide overflowing content */
+    width: 600px;
+    height: 300px;
+    background-color: #1e2a47;
+    padding: 40px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
 /* Style the dark inner container */
 .inner-container-dark {
-    width: 400px; /* Fixed width */
-    height: 70px; /* Fixed height */
-    background-color: #141d2f; /* Dark background color */
-    padding: 5px; /* Inner padding */
-    border-radius: 8px; /* Rounded corners */
-    position: absolute; /* Absolute positioning within its parent */
-    top: 45%; /* Vertically center within parent */
-    left: 56%; /* Horizontally position */
-    transform: translateX(-50%); /* Center horizontally */
+    width: 400px;
+    height: 70px;
+    background-color: #141d2f;
+    padding: 5px;
+    border-radius: 8px;
+    position: absolute;
+    top: 45%;
+    left: 56%;
+    transform: translateX(-50%);
 }
 
 /* Style the circular image */
 .circular-image {
-    width: 100px; /* Fixed width */
-    height: 100px; /* Fixed height */
-    border-radius: 50%; /* Circular shape */
-    position: absolute; /* Absolute positioning within its parent */
-    top: 30px; /* Position from the top */
-    left: 30px; /* Position from the left */
-    background-color: #ffffff; /* Background color */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #ffffff;
 }
 
 /* Style the name */
 .name {
-    position: absolute; /* Absolute positioning within its parent */
-    top: 30px; /* Position from the top */
-    left: 170px; /* Position from the left */
+    position: absolute;
+    top: 30px;
+    left: 170px;
 }
 
 /* Style the joined date */
 .joined {
-    position: absolute; /* Absolute positioning within its parent */
-    top: 40px; /* Position from the top */
-    left: 420px; /* Position from the left */
+    position: absolute;
+    top: 40px;
+    left: 420px;
 }
 
 /* Style the profile name */
 .profile-name {
-    position: absolute; /* Absolute positioning within its parent */
-    top: 80px; /* Position from the top */
-    left: 175px; /* Position from the left */
-    color: #0977ff; /* Text color */
+    position: absolute;
+    top: 80px;
+    left: 175px;
+    color: #0977ff;
 }
 
 /* Style the bio */
 .bio {
-    position: absolute; /* Absolute positioning within its parent */
-    top: 120px; /* Position from the bottom */
-    left: 175px; /* Position from the left */
-    color: #ffffff; /* Text color */
+    position: absolute;
+    top: 120px;
+    left: 175px;
+    color: #ffffff;
 }
 
 /* Define column styles for layout */
 .column {
-    width: 26%; /* Column width */
-    display: inline-block; /* Display as inline block */
-    vertical-align: middle; /* Vertically align within parent */
-    text-align: center; /* Center text */
-    margin: 0 2%; /* Margin between columns */
+    width: 26%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 2%;
 }
 
 /* Style h4 elements within columns */
 .column h4 {
-    color: #ffffff; /* Text color */
-    margin: 10px 0; /* Margin top and bottom */
+    color: #ffffff;
+    margin: 10px 0;
 }
 
 /* Style numeric fields */
 .numeric-field {
-    color: #ffffff; /* Text color */
-    margin: 0; /* Reset margin */
+    color: #ffffff;
+    margin: 0;
 }
-
-
 
 /* Style links container */
 .links-container {
-    position: absolute; /* Absolute positioning within its parent */
-    bottom: 0; /* Stick to the bottom */
-    right: 0; /* Stick to the right */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange links vertically */
-    padding: 0px 20px 30px 40px; /* Padding */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 10px 0px;
+}
+
+/* Style link rows */
+.link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px; /* Adjust as needed for spacing between rows */
+
 }
 
 /* Style link pairs */
 .link-pair {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center vertically within the pair */
-    margin-right: 100px; /* Margin between link pairs */
+    display: flex;
+    align-items: center;
 }
-
-
 
 /* Style links */
 .link {
-    color: #ffffff; /* Text color */
-    text-decoration: none; /* Remove underlines */
-    position: relative; /* Add relative positioning */
-    transition: text-decoration 0.3s ease; /* Add a smooth transition for text-decoration */
-    padding: 10px 80px 0px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    transition: text-decoration 0.3s ease;
+    padding: 10px 0px 10px 40px;
+}
+
+.company-link {
+    padding-right: 125px;
 }
 
 /* Style the text part of the link */
 .link-text {
-    padding-left: 10px; /* Add padding to separate text from the icon */
+    padding-left: 0px;
 }
 
 /* Style icons within links */
 .link .icon {
-    margin-right: 10px; /* Margin to the right */
+    margin-right: 15px;
 }
 
 /* Style links on hover */
 .link:hover .link-text {
-    text-decoration: underline; /* Apply underline to the text part on hover */
+    text-decoration: underline;
 }
-
-
-
 
 /* Style unavailable links with reduced opacity */
 .link-unavailable {
-    color: #ffffff; /* Text color */
-    opacity: 0.6; /* Reduced opacity */
+    color: #ffffff;
+    opacity: 0.6;
 }

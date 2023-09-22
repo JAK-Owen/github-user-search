@@ -56,38 +56,45 @@
 
             <!-- LINKS CONTAINER -->
             <div class="links-container" v-if="user">
-                <div class="link-pair">
-                    <div class="link">
-                        <img src="images/icon-location.svg" alt="Location Icon" class="icon">
+                <!-- Top Row -->
+                <div class="link-row">
+                    <div class="link-pair">
+                        <div class="link">
+                            <img src="images/icon-location.svg" alt="Location Icon" class="icon">
+                        </div>
+                        <div class="user-info link-text">{{ user.location || 'Location not available' }}</div>
                     </div>
-                    <div class="user-info link-text">{{ user.location || 'Location not available' }}</div>
-                </div>
-                <div class="link-pair">
-                    <div class="link">
-                        <img src="images/icon-twitter.svg" alt="Twitter Icon" class="icon">
-                    </div>
-                    <div class="user-info link-text">
-                        <a :href="'https://twitter.com/' + (user.twitter_username || '')">
-                            {{ user.twitter_username || 'Twitter not available' }}
-                        </a>
-                    </div>
-                </div>
-                <div class="link-pair">
-                    <div class="link">
-                        <img src="images/icon-website.svg" alt="Website Icon" class="icon">
-                    </div>
-                    <div class="user-info link-text">
-                        <a :href="user.blog || '#'">{{ user.blog || 'Website not available' }}</a>
+                    <div class="link-pair">
+                        <div class="link">
+                            <img src="images/icon-twitter.svg" alt="Twitter Icon" class="icon">
+                        </div>
+                        <div class="user-info link-text">
+                            <a :href="'https://twitter.com/' + (user.twitter_username || '')">
+                                {{ user.twitter_username || 'Twitter not available' }}
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="link-pair">
-                    <div class="link">
-                        <img src="images/icon-company.svg" alt="Company Icon" class="icon">
+                <!-- Second Row -->
+                <div class="link-row">
+                    <div class="link-pair">
+                        <div class="link">
+                            <img src="images/icon-website.svg" alt="Website Icon" class="icon">
+                        </div>
+                        <div class="user-info link-text">
+                            <a :href="user.blog || '#'">{{ user.blog || 'Website not available' }}</a>
+                        </div>
                     </div>
-                    <div class="user-info link-text">{{ user.company || 'Company not available' }}</div>
+                    <div class="link-pair company-link">
+                        <div class="link">
+                            <img src="images/icon-company.svg" alt="Company Icon" class="icon">
+                        </div>
+                        <div class="user-info link-text">{{ user.company || 'Company not available' }}</div>
+                    </div>
                 </div>
             </div>
-            <!-- LINKS CONTAINER END -->
+        <!-- LINKS CONTAINER END -->
+
         </div>
         <!-- MAIN APP CONTAINER END -->
     </div>
