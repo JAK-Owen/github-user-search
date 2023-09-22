@@ -180,39 +180,53 @@ h4 {
     margin: 0; /* Reset margin */
 }
 
+
+
 /* Style links container */
 .links-container {
     position: absolute; /* Absolute positioning within its parent */
     bottom: 0; /* Stick to the bottom */
     right: 0; /* Stick to the right */
-    display:block; /* Display as a block */
+    display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange links vertically */
-    padding: 0px 100px 30px 40px; /* Padding */
+    padding: 0px 20px 30px 40px; /* Padding */
 }
 
-/* Style link columns */
-.link-column {
-    width: auto; /* Auto width */
-    text-align: right; /* Right-align text */
-    margin: 5px 0; /* Margin top and bottom */
+/* Style link pairs */
+.link-pair {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically within the pair */
+    margin-right: 100px; /* Margin between link pairs */
 }
 
-/* Style icons within link columns */
-.icon {
-    margin-right: 10px; /* Margin to the right */
-}
+
 
 /* Style links */
 .link {
     color: #ffffff; /* Text color */
     text-decoration: none; /* Remove underlines */
-    padding: 40px; /* Padding around links */
+    position: relative; /* Add relative positioning */
+    transition: text-decoration 0.3s ease; /* Add a smooth transition for text-decoration */
+    padding: 10px 80px 0px 10px;
+}
+
+/* Style the text part of the link */
+.link-text {
+    padding-left: 10px; /* Add padding to separate text from the icon */
+}
+
+/* Style icons within links */
+.link .icon {
+    margin-right: 10px; /* Margin to the right */
 }
 
 /* Style links on hover */
-.link:hover {
-    border-bottom: solid 1px #ffffff; /* Add a bottom border on hover */
+.link:hover .link-text {
+    text-decoration: underline; /* Apply underline to the text part on hover */
 }
+
+
+
 
 /* Style unavailable links with reduced opacity */
 .link-unavailable {

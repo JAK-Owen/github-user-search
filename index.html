@@ -8,7 +8,7 @@
     <title>GitHub User Search</title>
 </head>
 <body>
-
+  <!-- SEARCH BAR -->
 <div id="app">
     <div class="search-bar-container">
         <div class="search-bar">
@@ -19,7 +19,8 @@
             <button class="font" @click="searchUser">Search</button>
         </div>
     </div>
-
+        <!-- SEARCH BAR END-->
+        <!-- MAIN APP CONTAINER -->
     <div class="app-container">
         <!-- Display user avatar, name, join date, profile name, and bio -->
         <img :src="user ? user.avatar_url : ''" alt="User Avatar" class="circular-image" v-if="user">
@@ -30,7 +31,7 @@
 
         <!-- Display error message if an error occurs -->
         <div class="error-message" v-if="error">{{ errorMessage }}</div>
-
+         <!-- INNER CONTAINER -->
         <div class="inner-container-dark" v-if="user">
             <div class="column">
                 <h4>Repos</h4>
@@ -45,8 +46,37 @@
                 <p class="numeric-field">{{ user.following }}</p>
             </div>
         </div>
+        <!-- INNER CONTAINER END-->
+        <!-- LINKS CONTAINER -->
+        <div class="links-container">
+            <div class="link-pair">
+                <a href="#" class="link">
+                    <img src="images/icon-location.svg" alt="Location Icon" class="icon">
+                    <span class="link-text">Location</span>
+                </a>
+                <a href="#" class="link">
+                    <img src="images/icon-twitter.svg" alt="Twitter Icon" class="icon">
+                    <span class="link-text">Twitter</span>
+                </a>
+            </div>
+            <div class="link-pair">
+                <a href="#" class="link">
+                    <img src="images/icon-website.svg" alt="Website Icon" class="icon">
+                    <span class="link-text">Website</span>
+                </a>
+                <a href="#" class="link">
+                    <img src="images/icon-company.svg" alt="Company Icon" class="icon">
+                    <span class="link-text">Company</span>
+                </a>
+            </div>
+        </div>
+         <!-- LINKS CONTAINER END-->
     </div>
+     <!-- MAIN APP CONTAINER END-->
 </div>
+
+
+
 
 <script type="module" src="https://unpkg.com/vue@3.2.7/dist/vue.esm-browser.js"></script>
 <script type="module" src="github-user-info.js"></script>
