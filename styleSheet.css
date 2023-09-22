@@ -36,6 +36,12 @@ h4 {
     font-size: 13px;
 }
 
+a {
+   color: #ffffff;
+   text-decoration: none;
+   opacity: 60%;
+}
+
 /* Apply 'space mono' font to elements with class '.font' */
 .font {
     font-family: 'space mono', monospace;
