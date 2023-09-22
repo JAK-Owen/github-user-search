@@ -42,6 +42,10 @@ a {
    opacity: 60%;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 /* Apply 'space mono' font to elements with class '.font' */
 .font {
     font-family: 'space mono', monospace;
@@ -192,15 +196,13 @@ a {
     bottom: 0;
     right: 0;
     display: flex;
-    flex-direction: column;
     padding: 0px 10px 30px 0px;
 }
 
 /* Style link rows */
 .link-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Change to a vertical column layout */
     margin-top: 10px; /* Adjusted spacing between rows */
 }
 
@@ -210,6 +212,7 @@ a {
     align-items: center;
     margin-left: 20px; /* Add equal margin to both sides for horizontal alignment */
     margin-right: 20px;
+    padding-bottom: 10px;
 }
 
 /* Style the text part of the link */
@@ -224,13 +227,14 @@ a {
     margin-right: 15px;
 }
 
-.company-link {
-    padding-right: 110px;
+/* Style Twitter and Company links */
+.link-pair.twitter-company {
+    flex-direction: row; /* Display them side by side */
 }
 
-/* Style links on hover */
-.link:hover .link-text {
-    text-decoration: underline;
+/* Style Twitter and Company icons */
+.link-pair.twitter-company .link .icon {
+    margin-right: 5px; /* Adjust the margin */
 }
 
 /* Style unavailable links with reduced opacity */
