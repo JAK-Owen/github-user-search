@@ -193,7 +193,7 @@ a {
     right: 0;
     display: flex;
     flex-direction: column;
-    padding: 0px 40px 10px 0px;
+    padding: 0px 10px 30px 0px;
 }
 
 /* Style link rows */
@@ -201,37 +201,31 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px; /* Adjust as needed for spacing between rows */
-
+    margin-top: 10px; /* Adjusted spacing between rows */
 }
 
 /* Style link pairs */
 .link-pair {
     display: flex;
     align-items: center;
-}
-
-/* Style links */
-.link {
-    color: #ffffff;
-    text-decoration: none;
-    position: relative;
-    transition: text-decoration 0.3s ease;
-    padding: 10px 0px 10px 40px;
-}
-
-.company-link {
-    padding-right: 125px;
+    margin-left: 20px; /* Add equal margin to both sides for horizontal alignment */
+    margin-right: 20px;
 }
 
 /* Style the text part of the link */
 .link-text {
-    padding-left: 0px;
+    padding-left: 10px; /* Add equal padding to both sides for horizontal alignment */
+    padding-right: 10px;
+    font-size: 13px;
 }
 
 /* Style icons within links */
 .link .icon {
     margin-right: 15px;
+}
+
+.company-link {
+    padding-right: 110px;
 }
 
 /* Style links on hover */
